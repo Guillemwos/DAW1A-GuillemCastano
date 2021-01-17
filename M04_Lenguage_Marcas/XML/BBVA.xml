@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>     <!--verisón + encoding-->
+
+<!DOCTYPE Equips_BBVA SYSTEM "dtd_BBVA.dtd">
+    <Equips_BBVA>     <!--Root del XML-->
+        <Equipo Nombre = "F.C. Barcelona">     <!--Primer Equipo-->
+            <Informacion_Club>     <!--Información del club del primer equipo-->
+                <Anno_Fundacion>1899</Anno_Fundacion>
+                <Nombre_Presidente>Sandro Rosell</Nombre_Presidente>
+                <Direccion>Avda Arístides Maillol s/n08028 Barcelona</Direccion>
+                <Pagina_Web>www.fcbarcelona.com</Pagina_Web>
+            </Informacion_Club>
+            <Informacion_Estadio Nombre ="Camp Nou"> <!--Información del estadio del primer equipo-->
+                <Anno_Construccion>1957</Anno_Construccion>
+                <Aforo>98.772 espectadores</Aforo>
+                <Dimensiones>105x68</Dimensiones>
+                <Direccion>Avd. Arístides Maillol</Direccion>
+            </Informacion_Estadio>
+            <Informacion_Plantilla> <!--Plantilla del primer equipo-->
+                <Jugador Nombre = "Victor Valdes Arribas">
+                    <Nombre_Jugador>Victor Valdes Arribas</Nombre_Jugador>
+                    <Fecha_Nacimiento>14 de Enero de 1982</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Hospitalet de Llobregat (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,83 cm.</Altura>
+                    <Peso>78 Kg.</Peso>
+                    <Posicion>Portero</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Gerard Piqué Bernabeu">
+                    <Nombre_Jugador>Gerard Piqué Bernabeu</Nombre_Jugador>
+                    <Fecha_Nacimiento>02 de Febrero de 1987</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Barcelona (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,87 cm.</Altura>
+                    <Peso>70 Kg.</Peso>
+                    <Posicion>Defensa Central</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Carles Puyol Saforcada">
+                    <Nombre_Jugador>Carles Puyol Saforcada</Nombre_Jugador>
+                    <Fecha_Nacimiento>13 de Abril de 1978</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Viella (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,78 cm.</Altura>
+                    <Peso>78 Kg.</Peso>
+                    <Posicion>Defensa todas las posiciones</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Xavier Hernandez Creus">
+                    <Nombre_Jugador>Xavier Hernandez Creus</Nombre_Jugador>
+                    <Fecha_Nacimiento>25 de Enero de 1980</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Terrassa (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,70 cm</Altura>
+                    <Peso>68 Kg.</Peso>
+                    <Posicion>Mediocentro Ofensivo</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "David Villa Sanchez">
+                    <Nombre_Jugador>David Villa Sanchez</Nombre_Jugador>
+                    <Fecha_Nacimiento>03 de Diciembre de 1981</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Tuilla, Langreo (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,75 cm.</Altura>
+                    <Peso>69 Kg.</Peso>
+                    <Posicion>Delantero Centro Rematador</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Andres Iniesta Lujan">
+                    <Nombre_Jugador>Andres Iniesta Lujan</Nombre_Jugador>
+                    <Fecha_Nacimiento>11 de Mayo de 1984</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Fuentealbilla (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,75 cm.</Altura>
+                    <Peso>63 Kg.</Peso>
+                    <Posicion>Extremo de ambas bandas</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Lionel Andres Messi">
+                    <Nombre_Jugador>Lionel Andres Messi</Nombre_Jugador>
+                    <Fecha_Nacimiento>24 de Junio de 1987</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Rosario, Santa Fe (Argentina)</Lugar_Nacimiento>
+                    <Altura>1,70 cm.</Altura>
+                    <Peso>63 Kg.</Peso>
+                    <Posicion>Extremo de ambas bandas</Posicion>
+                </Jugador>   
+            </Informacion_Plantilla>
+        </Equipo>
+        <Equipo Nombre = "Real Madrid C.F.">     <!--Segundo equipo-->
+            <Informacion_Club> <!--Información del club del segundo equipo-->
+                <Anno_Fundacion>1902</Anno_Fundacion>
+                <Nombre_Presidente>Florentino Perez</Nombre_Presidente>
+                <Direccion>Avenida de Concha Espina, 1 28036 Madrid</Direccion>
+                <Pagina_Web> www.realmadrid.es</Pagina_Web>
+            </Informacion_Club>
+            <Informacion_Estadio Nombre ="Santiago Bernabeu"> <!--Información del estadio del segundo equipo-->
+                <Anno_Construccion>1947</Anno_Construccion>
+                <Aforo>75.000 espectadores</Aforo>
+                <Dimensiones>106x66</Dimensiones>
+                <Direccion>Pº de la Castellana</Direccion>
+            </Informacion_Estadio>
+            <Informacion_Plantilla> <!--Plantilla del segundo equipo-->
+                <Jugador Nombre = "Iker Casillas Fernandez">
+                    <Nombre_Jugador>Iker Casillas Fernandez</Nombre_Jugador>
+                    <Fecha_Nacimiento>20 de Mayo de 1981</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Madrid (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,85 cm.</Altura>
+                    <Peso>79 Kg.</Peso>
+                    <Posicion>Portero</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Cristiano Ronaldo Santos Aveiro">
+                    <Nombre_Jugador>Cristiano Ronaldo Santos Aveiro</Nombre_Jugador>
+                    <Fecha_Nacimiento>05 de Febrero de 1985</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Funchal, Madeira (Portugal)</Lugar_Nacimiento>
+                    <Altura>1,84 cm.</Altura>
+                    <Peso>75 Kg.</Peso>
+                    <Posicion>Mediapunta, 2º Punta</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Ricardo Izecson Dos Santos Leite">
+                    <Nombre_Jugador>Ricardo Izecson Dos Santos Leite</Nombre_Jugador>
+                    <Fecha_Nacimiento>22 de Abril de 1982</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Brasilia, Distrito Federal (Brasil)</Lugar_Nacimiento>
+                    <Altura>1,86 cm.</Altura>
+                    <Peso>73 Kg.</Peso>
+                    <Posicion>Mediapunta, 2º Punta</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Xabier Alonso Olano">
+                    <Nombre_Jugador>Xabier Alonso Olano</Nombre_Jugador>
+                    <Fecha_Nacimiento>25 de Noviembre de 1981</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Tolosa (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,83 cm.</Altura>
+                    <Peso>75 Kg.</Peso>
+                    <Posicion>Medio</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Gonzalo Gerardo Higuain">
+                    <Nombre_Jugador>Gonzalo Gerardo Higuain</Nombre_Jugador>
+                    <Fecha_Nacimiento>10 de Diciembre de 1987</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Brest, Bretanna (Francia)</Lugar_Nacimiento>
+                    <Altura>1,84 cm.</Altura>
+                    <Peso>75 Kg.</Peso>
+                    <Posicion>Mediapunta, 2º Punta</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Mesut Ozil">
+                    <Nombre_Jugador>Mesut Ozil</Nombre_Jugador>
+                    <Fecha_Nacimiento>15 de Octubre de 1988</Fecha_Nacimiento>
+                    <Lugar_Nacimiento></Lugar_Nacimiento>
+                    <Altura>1,82 cm.</Altura>
+                    <Peso>73 Kg.</Peso>
+                    <Posicion>Mediapunta, 2º Punta</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Sergio Ramos Garcia">
+                    <Nombre_Jugador>Sergio Ramos Garcia</Nombre_Jugador>
+                    <Fecha_Nacimiento>30 de Marzo de 1986</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Sevilla (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,83 cm.</Altura>
+                    <Peso>73 Kg.</Peso>
+                    <Posicion>Defensa todas las posiciones</Posicion>
+                </Jugador>  
+            </Informacion_Plantilla>
+        </Equipo>
+        <Equipo Nombre = "R.C.D. Espanyol de Barcelona">     <!--Tercer equipo-->
+            <Informacion_Club> <!--Información del club del tercer equipo-->
+                <Anno_Fundacion>1900</Anno_Fundacion>
+                <Nombre_Presidente>Daniel Sánchez Llibre</Nombre_Presidente>
+                <Direccion>Paseo Olimpico, 17-19 08038 (Barcelona)</Direccion>
+                <Pagina_Web>www.rcdespanyol.cat</Pagina_Web>
+            </Informacion_Club>
+            <Informacion_Estadio Nombre ="Cornella-El Prat"> <!--Información del estadio del tercer equipo-->
+                <Anno_Construccion>2009</Anno_Construccion>
+                <Aforo>40.500 espectadores</Aforo>
+                <Dimensiones>105x68</Dimensiones>
+                <Direccion>Avenida del Baix Llobregat, 100 - 08940 Cornella de Llobregat, Barcelona</Direccion>
+            </Informacion_Estadio>
+            <Informacion_Plantilla> <!--Plantilla del tercer equipo-->
+                <Jugador Nombre = "Idriss Carlos Kameni">
+                    <Nombre_Jugador>Idriss Carlos Kameni</Nombre_Jugador>
+                    <Fecha_Nacimiento>18 de Febrero de 1984</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Douala (Camerun)</Lugar_Nacimiento>
+                    <Altura>1,84 cm.</Altura>
+                    <Peso>78 Kg.</Peso>
+                    <Posicion>Portero</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Ivan de la Pena Lopez">
+                    <Nombre_Jugador>Ivan de la Pena Lopez</Nombre_Jugador>
+                    <Fecha_Nacimiento>06 de Mayo de 1976</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Santander (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,72 cm.</Altura>
+                    <Peso>65 Kg.</Peso>
+                    <Posicion>Mediapunta, 2º Punta</Posicion>
+                </Jugador>  
+                <Jugador Nombre = "Luis Garcia Fernandez">
+                    <Nombre_Jugador>Luis Garcia Fernandez</Nombre_Jugador>
+                    <Fecha_Nacimiento>06 de Febrero de 1981</Fecha_Nacimiento>
+                    <Lugar_Nacimiento>Oviedo (Espanna)</Lugar_Nacimiento>
+                    <Altura>1,80 cm.</Altura>
+                    <Peso>70 Kg.</Peso>
+                    <Posicion></Posicion>
+                </Jugador>  
+            </Informacion_Plantilla>
+        </Equipo>
+    </Equips_BBVA>
+
