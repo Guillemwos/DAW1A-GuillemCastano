@@ -1,0 +1,179 @@
+<!--Defineix els elements simples.-->
+<!--Los elementos simples son aquellos que no tiene más elementos por debajo suyo y que,
+por definición, dependen de otros que SÍ están por encima.
+Por ejemplo, podemos tener un xml que guarde una Agenda telefónica.
+Dentro de esa Agenda tendremos los Contactos, y ahí tendremos cada uno de esos contactos
+como "Contacto". Dentro de cada contacto tendremos Nombre, Teléfono, Dirección, etc. 
+Agenda tiene diferentes elementos dentro, así como los tienen el elemento "Contactos" y "Contacto".
+Eso serían los elementos complejos, mientras que "Nombre", "Teléfono" y "Dirección", como no tienen
+SUBELEMENTOS, son elementos simples, pues ya va la información que queremos guardar.-->
+
+
+<!--Defineix els elements complexos.-->
+<!--Siguiendo con la ejemplificación anterior, cada uno de esos elementos que tienen SUBELEMENTOS,
+serían elementos complejos. Complejos porque están compuestos de elementos, piezas de información
+más simple.-->
+<!--Defineix els atributs dels elements.-->
+<!--Los atributos son piezas de información que podemos añadir a nuestros elementos y que nos
+sirven para matizar o proporcionar una información extra al elemento que los contiene.-->
+
+
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:simpleType name="tipoID">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:totalDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tipoIVA">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:totalDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tipoReferencia">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="5"/>
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+    <!--Restricción en las descripciones entre 1 y 100. Ejerecicio 8-->
+	<xsd:simpleType name="tipoDescripcion">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
+	<xsd:simpleType name="tipoPrecio">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="7"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tipoReal2Decimales">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tipoCodPostal">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:totalDigits value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
+	<xsd:simpleType name="tipoFormaPago">
+    <!--Utilizamos un Enum para restringir los métodos de pago. Ejercicio 6.-->
+		<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="efectivo"/>
+				<xsd:enumeration value="tarjeta"/>
+				<xsd:enumeration value="plazos"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+    <!--Importes con 2 cifras decimales. Ejercicio 10-->
+	<xsd:element name="nombre" type="xsd:string"/>
+	<xsd:element name="dir" type="xsd:string"/>
+	<xsd:element name="provincia" type="xsd:string"/>
+	<xsd:element name="cif" type="xsd:string"/>
+	<xsd:element name="dir_env" type="xsd:string"/>
+	<xsd:element name="base" type="tipoReal2Decimales"/>
+	<xsd:element name="cuota_iva" type="tipoReal2Decimales"/>
+	<xsd:element name="total" type="tipoReal2Decimales"/>
+	<xsd:element name="ref" type="tipoReferencia"/>
+	<xsd:element name="desc" type="tipoDescripcion"/>
+	<xsd:element name="cant" type="xsd:positiveInteger"/>
+	<xsd:element name="precio" type="tipoPrecio"/>
+	<xsd:element name="importe" type="tipoReal2Decimales"/>
+	<xsd:element name="fecha" type="xsd:date"/>
+
+	<xsd:element name="telefono">
+		<xsd:complexType>
+        <!--Fijamos el valor del número de la empresa. Ejercicio 5-->
+			<xsd:attribute name="num_tel" type="xsd:string" fixed="917776688"/>
+		</xsd:complexType>
+	</xsd:element>	
+
+	<xsd:element name="fax">
+		<xsd:complexType>
+			<xsd:attribute name="num_fax" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>	
+
+	<xsd:element name="poblacion">
+		<xsd:complexType>
+		    <xsd:simpleContent>
+			    <xsd:extension base="xsd:string">
+					<xsd:attribute name="cod_postal" type="tipoCodPostal"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>	
+	
+	<xsd:element name="linea">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ref"/>
+				<xsd:element ref="desc"/>
+				<xsd:element ref="cant"/>
+				<xsd:element ref="precio"/>
+				<xsd:element ref="importe"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="datos_empresa">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nombre"/>
+				<xsd:element ref="dir"/>
+				<xsd:element ref="poblacion"/>
+				<xsd:element ref="provincia"/>
+				<xsd:element ref="cif"/>
+				<xsd:element ref="telefono" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="fax" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>		
+	
+	<xsd:element name="datos_cliente">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nombre"/>
+				<xsd:element ref="dir_env"/>
+				<xsd:element ref="poblacion"/>
+				<xsd:element ref="provincia"/>
+			</xsd:sequence>
+            <!--Definimos que la ocurrencia en el Número de clientes sea 1. Ejerecicio 9.-->
+			<xsd:attribute name="n_cli" type="tipoID" minOccurs="1"/>
+		</xsd:complexType>
+	</xsd:element>		
+
+	<xsd:element name="datos_factura">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="fecha"/>
+				<xsd:element ref="linea" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="base"/>
+				<xsd:element ref="cuota_iva"/>
+				<xsd:element ref="total"/>
+			</xsd:sequence>
+			<xsd:attribute name="n_ped" type="tipoID"/>
+			<xsd:attribute name="iva" type="tipoIVA"/>
+			<xsd:attribute name="f_pago" type="tipoFormaPago" use="required"/>
+			<xsd:attribute name="moneda" type="xsd:string" fixed="euro"/>
+		</xsd:complexType>
+	</xsd:element>	
+	
+	<xsd:element name="factura">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="datos_empresa"/>
+				<xsd:element ref="datos_cliente"/>
+				<xsd:element ref="datos_factura"/>
+			</xsd:sequence>
+            <!--Definimos las restricciones del Atributo "n_fac". Ejercicio 4-->
+			<xsd:attribute name="n_fac" type="xs:positiveinteger" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<!DOCTYPE Equips_BBVA [
+<!ELEMENT Equips_BBVA (Equipo+)>
+    <!ELEMENT Equipo (Informacion_Club, Informacion_Estadio, Informacion_Plantilla)>
+        <!ATTLIST Equipo Nombre CDATA #REQUIRED>
+        <!ELEMENT Informacion_Club (Anno_Fundacion, Nombre_Presidente, Direccion, Pagina_Web)>
+            <!ELEMENT Anno_Fundacion (#PCDATA)>
+            <!ELEMENT Nombre_Presidente (#PCDATA)>
+            <!ELEMENT Direccion (#PCDATA)>
+            <!ELEMENT Pagina_Web (#PCDATA)>
+        <!ELEMENT Informacion_Estadio (Anno_Construccion, Aforo, Dimensiones, Direccion)>
+            <!ATTLIST Informacion_Estadio Nombre CDATA #REQUIRED>
+            <!ELEMENT Anno_Construccion (#PCDATA)>
+            <!ELEMENT Aforo (#PCDATA)>
+            <!ELEMENT Dimensiones (#PCDATA)>
+            <!ELEMENT Direccion (#PCDATA)>
+        <!ELEMENT Informacion_Plantilla (Jugador+)>
+            <!ELEMENT Jugador (Nombre_Jugador, Fecha_Nacimiento, Lugar_Nacimiento, Altura, Peso, Posicion)>
+                <!ELEMENT Nombre_Jugador (#PCDATA)>
+                <!ELEMENT Fecha_Nacimiento (#PCDATA)>
+                <!ELEMENT Lugar_Nacimiento (#PCDATA)>
+                <!ELEMENT Altura (#PCDATA)>
+                <!ATTLIST Altura Unitat (cm|m) "m">
+                <!ELEMENT Peso (#PCDATA)>
+                <!ATTLIST Altura Unitat (kg|g) "kg">
+                <!ELEMENT Posicion (#PCDATA)>
+
+]>

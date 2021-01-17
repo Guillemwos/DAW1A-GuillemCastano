@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sociedad N_Sociedad="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Sociedad.xsd">
+    <Nombre>Sociedad 1</Nombre>
+    <Anno_Fundacion>1996</Anno_Fundacion>
+    <Presidente n_socio = "0" nif = "34591283R">
+        <Nombre>Antonio</Nombre>
+        <Apellidos>Perez Lopez</Apellidos>
+    </Presidente>
+    <Socios Cantidad = "2">
+        <Socio n_socio = "1" nif = "61039481L">
+            <Nombre>Manolo</Nombre>
+            <Apellidos>Galvan Vazquez</Apellidos>
+        </Socio>
+        <Socio n_socio = "2" nif = "58293026M">
+            <Nombre>Marta</Nombre>
+            <Apellidos>Carro Moyano</Apellidos>
+        </Socio>
+    </Socios>
+</Sociedad>
