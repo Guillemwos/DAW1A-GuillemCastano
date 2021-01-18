@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Societat">
+        <xs:complextype>
+            <xs:sequence>
+                <xs:element name="Socis">
+                    <xs:complextype>
+                        <xs:sequence>
+                            <xs:element name="Soci">
+                                <complextype>
+                                    <xs:sequence>
+                                        <xs:element name="Nom" type="xs:string">
+                                            <xs:simpleType>
+                                                <xs:restriction>
+                                                    <xs:minLength value="1"/>
+                                                    <xs:maxLength value="20"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Cognoms" type="xs:string">
+                                            <xs:simpleType>
+                                                <xs:restriction>
+                                                    <xs:minLength value="1"/>
+                                                    <xs:maxLength value="30"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="N_soci" type="xs:integer">
+                                        <xs:minInclusive value="0"/>
+                                        <xs:maxInclusive value="150"/>
+                                    </xs:attribute>
+                                    <xs:attribute name="DNI" type="xs:string" value="[0-9]{8}[A-Za-z]{1}" length="9"/>
+                                </complextype>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Quantitat" type="xs:integer">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="150"/>
+                        </xs:attribute>
+                    </xs:complextype>
+                </xs:element>
+
+                <xs:element name="President">
+                    <xs:complextype>
+                        <xs:sequence>
+                            <xs:element name="Nom" type="xs:string">
+                                <xs:simpleType>
+                                    <xs:restriction>
+                                        <xs:minLength value="1"/>
+                                        <xs:maxLength value="20"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Cognom" type="xs:string">
+                               <xs:simpleType>
+                                    <xs:restriction>
+                                        <xs:minLength value="1"/>
+                                        <xs:maxLength value="30"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="DNI" type="xs:string" value="[0-9]{8}[A-Za-z]{1}" length="9"/>
+                        <xs:attribute name="N_Soci" type="xs:integer"/>
+                    </xs:complextype>
+                    
+                </xs:element>
+
+                <xs:element name="Any_Fundacio">
+                    <xs:simpleType>
+                        <xs:restriction value="xs:year">
+                            <xs:minInclusive value="1500"/>
+                            <xs:maxInclusive value="2050"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <xs:element name="Nom">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="15"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="N_Societat" type="xs:string" value="[0-9]{3}[A-Z]{1}" maxLength="4"/>
+        </xs:complextype>
+    </xs:element>
+</xs:schema>

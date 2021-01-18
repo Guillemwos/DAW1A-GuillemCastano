@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+         fieldset.DatosPersonales {
+            display: flex;
+            background-color: #888888;
+            margin-right: 30%;
+        }
+        
+        fieldset.FormadeAcceso {
+            display: flex;
+            background-color: #eeaf7c;
+            margin-right: 30%;
+        }
+        
+        fieldset.DocumentosAdjuntos {
+            display: flex;
+            background-color: #b66464;
+            margin-right: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">HOJA DE INSCRIPCIÓN EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+    <!--La forma correcta es hacerlo con un css, pero funciona dejandolo con el align-->
+    <fieldset class="DatosPersonales">
+        <legend style="border: solid; border-width:1px; background-color:aliceblue;">Datos Personales</legend>
+        <div class="container">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" placeholder="Juan" style="margin-right: 7px;"></input><br>
+
+            <label for="Localidad">Localidad de Nacimiento:</label><br>
+            <input type="text" id="Localidad" name="Localidad"><br>
+
+            <label for="Direccion">Direccion:</label><br>
+            <input type="text" id="Direccion" name="Direccion" style="width: 55%;"><br>
+        </div>
+        <div>
+            <label for="Sname">Apellidos:</label><br>
+            <input type="text" id="Sname" name="Sname" placeholder="Martinez" style="margin-right: 7px;" /><br>
+
+            <label for="provincia"> Provincia:</label><br>
+
+
+            <select name="provincia">
+                <option>Barcelona</option>
+                <option>Madrid</option>
+                <option>Tarragona</option>
+                <option>Lledia</option>
+                <option>Girona</option>
+                <option>Huesca</option>
+                <option>Sevilla</option>
+                <option>Granada</option>
+                <option>Zaragoza</option>
+            </select>
+        </div>
+        <br><br>
+        <div>
+            <label for="DNI">DNI:</label><br>
+            <input type="text" id="DNI" name="DNI" /><br>
+
+            <label for="birth">Fecha de Nacimiento:</label><br>
+            <input type="date" id="birth" name="birth"><br>
+
+            <label for="postalCode">Codigo Postal:</label><br>
+            <input type="number" id="postalCode" name="postalCode">
+        </div>
+
+    </fieldset><br>
+
+    <fieldset class="FormadeAcceso">
+        <legend style="border: solid; border-width:1px; background-color:aliceblue;">Forma de Acceso</legend>
+        <div style="margin-left:45px;">
+            <input type="radio" id="Directo">Directo<br>
+            <input type="radio" style="margin-left: 45px;">Bachillerato Log Modalidad
+            <input type="text" id="modalidad" name="Bachillerato"><br>
+            <input type="radio" style="margin-left: 45px;" id="experimental">Experimental<br>
+            <input type="radio" style="margin-left: 45px;" id="COU">COU Opcion<input type="text"><br>
+            <input type="radio" style="margin-left: 45px;" id="FP2">FP2<br>
+            <input type="radio" style="margin-left: 45px;" id="otros">Otros (Especifique)<input type="text"><br>
+            <input type="radio" id="pruebaLibre">Prueba Libre
+        </div>
+    </fieldset><br>
+
+    <fieldset class="DocumentosAdjuntos">
+        <legend style="border: solid; border-width:1px; background-color:aliceblue;">Documentos Adjuntos</legend>
+        <div>
+            <input type="checkbox" id="dni"> Fotocopia DNI
+            <input type="checkbox" id="Certificado" style="margin-left: 20%;">Certificado Academico<br>
+            <input type="checkbox"> Otros documentos (especifique)<input type="text" id="otrosDocumentos">
+            
+        </div>
+
+    </fieldset>
+    <br>
+    <input type="submit" value="Submit">
+</body>
+</html>

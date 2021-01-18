@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<Hipermercadoxmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Hipermercado.xsd">
+    <Cliente>
+        <NIF>11.111.111 A</NIF>
+        <Nombre>Pepe</Nombre>
+        <Apellidos>Castro</Apellidos>
+        <Telefono>3524124245</Telefono>
+        <Saldo>500</Saldo>
+    </Cliente>
+    <Producto>
+        <Codigo></Codigo>
+        <Nombre_Comercial></Nombre_Comercial>
+        <Tipo></Tipo>
+        <Precio></Precio>
+    </Producto>
+    <Compra>
+        <Num_Pedido></Num_Pedido>
+        <NIF_Comprador></NIF_Comprador>
+        <Codigo_producto></Codigo_producto>
+        <Fecha></Fecha>
+    </Compra>
+</Hipermercado>
